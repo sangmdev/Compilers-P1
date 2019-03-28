@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -g -Wall 
 TARGET = main
-OBJ = main.c
+OBJ = main.c scanner.c scanner.h token.h
 
 all: $(TARGET)
 $(TARGET): $(OBJ)

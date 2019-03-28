@@ -25,8 +25,7 @@ int main(int argc, char *argv[]){
       fp = stdin;
       printf("taking keyboard entry\n");
    }
-
-   //process arguments
+  
    //call testScanner()
    return 0;
 }
