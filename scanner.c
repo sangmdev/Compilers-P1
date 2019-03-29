@@ -7,10 +7,10 @@
 //  count lines
 //  map character to column #
 //filter2 function
-//  if token is ID, compare to kewod list and report keyword if match,
+//  if token is ID, compare to keyword list and report keyword if match,
 //  else pass as ID
-int scanner(){
+struct Token scanner(enum tokenID tokenid, char tokenString, int lineNumber){
+   struct Token myToken;
 
-
-   return 0;
+   return myToken;
 }

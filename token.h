@@ -49,8 +49,6 @@ struct Token{
    enum tokenID tokenId;
    char tokenString[100];
    int lineNumber;
-   
-   //constructor
 }; //End of Token Structure
 
 #endif

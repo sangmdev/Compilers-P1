@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <errno.h>
 #include <string.h>
-
+#include "testScanner.h"
 int main(int argc, char *argv[]){
    if(argc > 2){
       fprintf(stderr,"ERROR: Too many arguments\n");
@@ -27,5 +27,6 @@ int main(int argc, char *argv[]){
    }
   
    //call testScanner()
+   testScanner();
    return 0;
 }
