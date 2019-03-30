@@ -11,6 +11,9 @@
 //  else pass as ID
 struct Token scanner(enum tokenID tokenid, char tokenString, int lineNumber){
    struct Token myToken;
+   myToken.tokenId = tokenid;
+   myToken.lineNumber = 14;
 
+   printf("%d from token", myToken.lineNumber);
    return myToken;
 }
