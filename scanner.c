@@ -112,6 +112,9 @@ struct Token scanner(FILE *input, int *lineNumber){
    myToken.tokenString = NULL;
    myToken.lineNumber = 999;
    while(currentState < 1000 && currentState > -1){
+      if(lookahead == '\n'){
+           (*lineNumber)++;
+      }
       lookahead = fgetc(input);
       printf("look:%d\n", lookahead);
         if(lookahead == '&'){               //comment start
@@ -122,6 +125,7 @@ struct Token scanner(FILE *input, int *lineNumber){
 	   lookahead = fgetc(input);
         }
        //map char to column #
+
       for(i = 0; i < 16; i++){                 //test for all the operators and delimiters
          if(columnLookup[i].key == lookahead){
             columnNumber = columnLookup[i].value;
@@ -198,9 +202,7 @@ struct Token scanner(FILE *input, int *lineNumber){
 	    }
 	}
         //count lines//
-        if(lookahead == '\n'){
-           lineNumber++;
-        }
+
 	currentState = nextState;
       }
    }//end of while loop

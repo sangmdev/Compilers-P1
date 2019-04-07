@@ -3,7 +3,7 @@
 #include "token.h"
 #include <stdlib.h>
 #include <string.h>
-char *tokenNames[100] = {"ITER keyword", "VOID keyword", "VAR keyword", "RETURN keyword", "SCAN keyword", "PRINT keyword", "PROGRAM keyword", "COND keyword", "THEN keyword", "LET keyword", "INT keyword", "Equals operator", "Less than operator", "greater than operator", "colon delimiter", "plus operator", "minus operator", "asterick operator", "forwardslash delimiter", "percent operator", "period operator", "left paren delimiter", "right paren delimiter", "comma delimiter", "left brace delimiter", "right brace delimiter", "semicolon delimiter", "left bracket delimiter", "right bracket delimiter", "end of file delimiter", "identifier", "number", "error"};
+char *tokenNames[100] = {"ITER keyword", "VOID keyword", "VAR keyword", "RETURN keyword", "SCAN keyword", "PRINT keyword", "PROGRAM keyword", "COND keyword", "THEN keyword", "LET keyword", "INT keyword", "Equals operator", "Less than operator", "Greater than operator", "Colon delimiter", "Plus operator", "Minus operator", "Asterick operator", "Forwardslash delimiter", "Percent operator", "Period operator", "Left paren delimiter", "Right paren delimiter", "Comma delimiter", "Left brace delimiter", "Right brace delimiter", "Semicolon delimiter", "Left bracket delimiter", "Right bracket delimiter", "End of File delimiter", "Identifier", "Number", "ERROR"};
 struct token{
    enum tokenID tokenid; 
    char string[100][50]; 
