@@ -20,22 +20,12 @@ int main(int argc, char *argv[]){
          fprintf(stderr, "ERROR: %s\n", strerror(errno));
 	 exit(EXIT_FAILURE);
       }
-      testScanner(base, &fp);
+      testScanner(fp);
       fclose(fp);
    }//END OF argc == 2
    else if(argc == 1){
-      char myChar;
-      char *keyboardFileName = "keyboardFile.txt";
-      fp = fopen(keyboardFileName, "wa+");
-      if(fp == NULL){
-         fprintf(stderr, "ERROR: %s\n", strerror(errno));
-	 exit(EXIT_FAILURE);
-      }
-      while((myChar = getchar()) != EOF ){
-         fprintf(fp, "%c", myChar);
-      }
-      fclose(fp);
-      testScanner(keyboardFileName, &fp);
+      fp = stdin;
+      testScanner(fp);
       fclose(fp);
    } 
    return 0;
