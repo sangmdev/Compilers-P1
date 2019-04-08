@@ -116,13 +116,14 @@ struct Token scanner(FILE *input, int *lineNumber){
            (*lineNumber)++;
       }
       lookahead = fgetc(input);
-      printf("look:%d\n", lookahead);
-        if(lookahead == '&'){               //comment start
+      //printf("look:%d\n", lookahead);  This line display every character for testing
+        if(lookahead == '&'){
+	   //comment start
            while (lookahead != '\n'){      //ignore input until new line
 	      lookahead = fgetc(input);
 	   }
-	   lineNumber++;
 	   lookahead = fgetc(input);
+	   (*lineNumber)++;
         }
        //map char to column #
 
@@ -154,7 +155,10 @@ struct Token scanner(FILE *input, int *lineNumber){
          if(nextState == 1021){ //eof case
 	    myToken.tokenId = EOF_TK;
 	    myToken.tokenString = "EOF";
-	    myToken.lineNumber = *lineNumber;
+	    if(*lineNumber == 1){
+	       (*lineNumber)++;
+	    }
+	    myToken.lineNumber = --(*lineNumber);
 	    return myToken;
 	 }else if(nextState > 1000){ //final state, have to check tokenMap
 	    for(i = 0; i < 21; i++){
