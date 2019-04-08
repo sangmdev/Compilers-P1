@@ -1,7 +1,8 @@
 Project Requirements:
 Implement scanner for the provided lexical definitions.
 
-The scanner is embedded and thus it will return one token every time it is called. Since the parser is not available yet, we will use a tester program to call the scanner.
+The scanner is embedded and thus it will return one token every time it is called. Since the parser is not available yet,
+we will use a tester program to call the scanner.
 
 The scanner should be implemented as FSA table + driver (100 points)
     Implement a token as a triplet {tokenID, tokenInstance, line#} (if using option with line numbers)
